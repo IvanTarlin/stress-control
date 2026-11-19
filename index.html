@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стресс под контролем — тест, дыхание и чек-лист</title>
+  <meta name="description" content="Интерактивный ресурс о психологическом здоровье: тест уровня стресса, дыхательная практика 4-4-6, игровой сценарий и чек-лист полезных привычек.">
+  <meta name="theme-color" content="#0f766e">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="#hero" aria-label="Стресс под контролем — на главную">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"></circle>
+          <path d="M4 16h5l2.6-5.4 3.6 10.8 2.6-5.4H28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="logo-text">
+          Стресс
+          <span class="logo-accent">под контролем</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация" data-nav>
+        <ul class="nav-list">
+          <li><a href="#about">О стрессе</a></li>
+          <li><a href="#test">Тест</a></li>
+          <li><a href="#breathing">Дыхание</a></li>
+          <li><a href="#scenario">Сценарий</a></li>
+          <li><a href="#checklist">Чек-лист</a></li>
+          <li><a href="#support">Помощь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-badge">Социальный проект о психологическом здоровье</p>
+          <h1>Стресс под контролем</h1>
+          <p class="hero-lead">
+            Интерактивный ресурс о том, как вовремя замечать напряжение, понимать его причины
+            и возвращать себе ясную голову — без лекций и нравоучений.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#test">Пройти тест</a>
+            <a class="button button-ghost" href="#breathing">Дышать 4–4–6</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>3 минуты</strong><span>на тест</span></li>
+            <li><strong>4–4–6</strong><span>дыхание</span></li>
+            <li><strong>8 пунктов</strong><span>чек-лист</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-art-wrap">
+          <svg class="hero-art" viewBox="0 0 360 360" role="img" aria-labelledby="hero-art-title hero-art-desc">
+            <title id="hero-art-title">Спокойное дыхание</title>
+            <desc id="hero-art-desc">Абстрактная схема: расходящиеся круги и линия пульса, которая выравнивается.</desc>
+            <defs>
+              <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0f766e"></stop>
+                <stop offset="1" stop-color="#3ec3ae"></stop>
+              </linearGradient>
+              <linearGradient id="heroCoreGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d9f0ea"></stop>
+                <stop offset="1" stop-color="#9fdccd"></stop>
+              </linearGradient>
+            </defs>
+            <circle class="hero-ring hero-ring--outer" cx="180" cy="180" r="152" fill="none" stroke="url(#heroGradient)" stroke-width="1.5" stroke-dasharray="6 10"></circle>
+            <circle class="hero-ring hero-ring--middle" cx="180" cy="180" r="118" fill="none" stroke="url(#heroGradient)" stroke-width="2" opacity="0.45"></circle>
+            <circle class="hero-core" cx="180" cy="180" r="88" fill="url(#heroCoreGradient)"></circle>
+            <circle class="hero-core-pulse" cx="180" cy="180" r="88" fill="none" stroke="#0f766e" stroke-width="2" opacity="0.3"></circle>
+            <path class="hero-wave" d="M72 180h40l16-34 20 68 18-46 14 12h108" fill="none" stroke="#0b5a54" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle class="hero-dot hero-dot--one" cx="302" cy="88" r="7" fill="#e2703a" opacity="0.75"></circle>
+            <circle class="hero-dot hero-dot--two" cx="68" cy="284" r="5" fill="#0f766e" opacity="0.6"></circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Коротко о главном</p>
+          <h2>Стресс — это не враг, а сигнал</h2>
+          <p class="section-lead">
+            Организм реагирует на нагрузку одинаково: и на экзамен, и на ссору, и на дедлайн.
+            Проблема начинается тогда, когда сигнал не выключается неделями.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="info-card reveal">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path>
+              </svg>
+            </span>
+            <h3>Тело</h3>
+            <p>Учащается пульс, напрягаются плечи и шея, сбивается сон. Так адреналин и кортизол готовят вас к действию.</p>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </span>
+            <h3>Мысли</h3>
+            <p>Внимание сужается, включается катастрофизация: «я точно не справлюсь». Мозг ищет угрозу даже там, где её нет.</p>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+              </svg>
+            </span>
+            <h3>Поведение</h3>
+            <p>Хочется отложить дела, залипнуть в телефоне или, наоборот, контролировать всё вокруг. Это защитные стратегии.</p>
+          </article>
+        </div>
+
+        <div class="flip-grid">
+          <button class="flip-card reveal" type="button" aria-pressed="false">
+            <span class="flip-card-inner">
+              <span class="flip-card-face flip-card-face--front">
+                <span class="flip-card-tag">Миф</span>
+                <span class="flip-card-text">Стресс всегда вреден</span>
+                <span class="flip-card-hint">Нажмите, чтобы узнать больше</span>
+              </span>
+              <span class="flip-card-face flip-card-face--back">
+                <span class="flip-card-tag">Реальность</span>
+                <span class="flip-card-text">Краткий стресс мобилизует: ускоряет реакцию и помогает собраться. Вреден длительный, незавершённый стресс.</span>
+              </span>
+            </span>
+          </button>
+
+          <button class="flip-card reveal" type="button" aria-pressed="false">
+            <span class="flip-card-inner">
+              <span class="flip-card-face flip-card-face--front">
+                <span class="flip-card-tag">Миф</span>
+                <span class="flip-card-text">Отдых — это слабость</span>
+                <span class="flip-card-hint">Нажмите, чтобы узнать больше</span>
+              </span>
+              <span class="flip-card-face flip-card-face--back">
+                <span class="flip-card-tag">Реальность</span>
+                <span class="flip-card-text">Восстановление — часть работы. Без пауз падает продуктивность, растёт тревога и количество ошибок.</span>
+              </span>
+            </span>
+          </button>
+
+          <button class="flip-card reveal" type="button" aria-pressed="false">
+            <span class="flip-card-inner">
+              <span class="flip-card-face flip-card-face--front">
+                <span class="flip-card-tag">Миф</span>
+                <span class="flip-card-text">Нужно просто взять себя в руки</span>
+                <span class="flip-card-hint">Нажмите, чтобы узнать больше</span>
+              </span>
+              <span class="flip-card-face flip-card-face--back">
+                <span class="flip-card-tag">Реальность</span>
+                <span class="flip-card-text">Саморегуляция — это навык: дыхание, режим, планирование. Дело не в силе воли, а в технике.</span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="chart-card reveal">
+          <h3>Что чаще всего называют источником стресса</h3>
+          <ul class="chart">
+            <li class="chart-row chart-row--study">
+              <span class="chart-label"><span>Учёба и дедлайны</span><span class="chart-value">68%</span></span>
+              <span class="chart-track"><span class="chart-fill"></span></span>
+            </li>
+            <li class="chart-row chart-row--future">
+              <span class="chart-label"><span>Неопределённость будущего</span><span class="chart-value">61%</span></span>
+              <span class="chart-track"><span class="chart-fill"></span></span>
+            </li>
+            <li class="chart-row chart-row--social">
+              <span class="chart-label"><span>Соцсети и сравнение с другими</span><span class="chart-value">47%</span></span>
+              <span class="chart-track"><span class="chart-fill"></span></span>
+            </li>
+            <li class="chart-row chart-row--relations">
+              <span class="chart-label"><span>Отношения</span><span class="chart-value">42%</span></span>
+              <span class="chart-track"><span class="chart-fill"></span></span>
+            </li>
+            <li class="chart-row chart-row--money">
+              <span class="chart-label"><span>Деньги</span><span class="chart-value">38%</span></span>
+              <span class="chart-track"><span class="chart-fill"></span></span>
+            </li>
+          </ul>
+          <p class="chart-note">Данные носят иллюстративный характер и показывают, как читается инфографика.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="test">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Практика 1</p>
+          <h2>Тест: уровень напряжения</h2>
+          <p class="section-lead">
+            Шесть вопросов о последних двух неделях. Ответы остаются в браузере: они не сохраняются
+            и никуда не отправляются.
+          </p>
+        </header>
+
+        <div class="quiz-card reveal">
+          <div class="quiz-progress">
+            <span class="quiz-progress-track">
+              <span class="quiz-progress-fill" data-quiz-progress></span>
+            </span>
+            <p class="quiz-progress-text" aria-live="polite" data-quiz-progress-text>Вопрос 1 из 6</p>
+          </div>
+          <div class="quiz-stage" data-quiz-stage></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="breathing">
+      <div class="container breathing-layout">
+        <div class="breathing-info reveal">
+          <p class="section-eyebrow">Практика 2</p>
+          <h2>Дыхание 4–4–6</h2>
+          <p>
+            Самый быстрый способ снизить физиологическое возбуждение — удлинить выдох.
+            Схема проста: вдох на 4 счёта, задержка на 4, выдох на 6.
+          </p>
+          <ol class="steps-list">
+            <li>Сядьте удобно и опустите плечи.</li>
+            <li>Вдохните через нос на 4 счёта.</li>
+            <li>Задержите дыхание на 4 счёта.</li>
+            <li>Выдохните через рот на 6 счётов.</li>
+            <li>Повторите 5–7 циклов.</li>
+          </ol>
+          <div class="breathing-controls">
+            <button class="button button-primary" type="button" data-breath-toggle>Начать практику</button>
+            <button class="button button-ghost" type="button" data-breath-reset>Сбросить</button>
+          </div>
+        </div>
+
+        <div class="breathing-stage reveal">
+          <div class="breath-visual" data-breath-visual data-phase="idle">
+            <span class="breath-halo"></span>
+            <span class="breath-core"></span>
+            <span class="breath-readout">
+              <span class="breath-phase" data-breath-phase>Готовы?</span>
+              <span class="breath-countdown" data-breath-countdown>—</span>
+            </span>
+          </div>
+          <p class="breath-counter">Циклов выполнено: <strong data-breath-cycles>0</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="scenario">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Практика 3</p>
+          <h2>Сценарий: один вечер</h2>
+          <p class="section-lead">
+            Три решения — три последствия. Пройдите короткий сценарий и посмотрите, к чему приводит
+            каждый выбор.
+          </p>
+        </header>
+
+        <div class="scenario-card reveal" data-scenario>
+          <p class="scenario-step" data-scenario-step>Шаг 1 из 3</p>
+          <h3 class="scenario-title" data-scenario-title></h3>
+          <p class="scenario-text" data-scenario-text></p>
+          <div class="option-list" data-scenario-options></div>
+          <p class="scenario-feedback" aria-live="polite" data-scenario-feedback hidden></p>
+          <button class="button button-primary" type="button" data-scenario-next hidden>Дальше</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="container checklist-layout">
+        <div class="checklist-info reveal">
+          <p class="section-eyebrow">Каждый день</p>
+          <h2>Чек-лист антистресса</h2>
+          <p>
+            Отметьте то, что уже получается. Цель — не сто процентов, а осознанный выбор
+            в пользу восстановления.
+          </p>
+          <div class="checklist-progress">
+            <span class="quiz-progress-track">
+              <span class="quiz-progress-fill" data-checklist-progress></span>
+            </span>
+            <p class="quiz-progress-text" aria-live="polite" data-checklist-text>Отмечено 0 из 8</p>
+          </div>
+        </div>
+
+        <ul class="checklist reveal" data-checklist>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Сон 7–9 часов</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">30 минут движения</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Прогулка без телефона</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Дыхательная пауза в течение дня</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Разговор с близким человеком</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Экран выключен за час до сна</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Одно дело, доведённое до конца</span>
+            </label>
+          </li>
+          <li class="checklist-item">
+            <label class="checklist-label">
+              <input class="checklist-input" type="checkbox">
+              <span class="checklist-box" aria-hidden="true"></span>
+              <span class="checklist-text">Вода вместо третьей чашки кофе</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="support">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Если сил не хватает</p>
+          <h2>Когда стоит обратиться за помощью</h2>
+          <p class="section-lead">
+            Просить о поддержке — нормально. Навыки саморегуляции помогают, но не заменяют
+            помощь специалиста, если состояние держится долго.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="info-card reveal">
+            <h3>Школьный или вузовский психолог</h3>
+            <p>Бесплатно и конфиденциально. Можно прийти без подготовки — достаточно сказать, что трудно.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>Врач-психотерапевт</h3>
+            <p>Обратитесь в поликлинику по месту жительства, если нарушен сон, аппетит или тревога мешает учиться.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>Экстренная ситуация</h3>
+            <p>Если есть угроза жизни и здоровью, звоните по единому номеру экстренных служб <strong>112</strong>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="feedback">
+      <div class="container feedback-layout">
+        <div class="feedback-info reveal">
+          <p class="section-eyebrow">Обратная связь</p>
+          <h2>Что вы думаете об этом проекте</h2>
+          <p>
+            Форма демонстрационная: данные проверяются в браузере и не отправляются на сервер.
+            Поля проверяются на клиенте, введённый текст очищается от служебных символов.
+          </p>
+          <p class="feedback-note">
+            Отправляя форму, вы подтверждаете согласие на обработку введённых данных в демонстрационных целях.
+          </p>
+          <button class="button button-ghost" type="button" data-dialog-open>Политика конфиденциальности</button>
+        </div>
+
+        <form class="feedback-form reveal" novalidate data-feedback-form>
+          <div class="field">
+            <label for="feedback-name">Как к вам обращаться</label>
+            <input id="feedback-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="40" required>
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="feedback-email">Электронная почта</label>
+            <input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="80" required>
+            <p class="field-error" data-error-for="email"></p>
+          </div>
+
+          <div class="field">
+            <label for="feedback-message">Сообщение</label>
+            <textarea id="feedback-message" name="message" rows="4" minlength="10" maxlength="500" required></textarea>
+            <p class="field-error" data-error-for="message"></p>
+          </div>
+
+          <div class="field field--checkbox">
+            <label class="checkbox-label" for="feedback-consent">
+              <input id="feedback-consent" name="consent" type="checkbox" required>
+              <span>Согласен на обработку введённых данных</span>
+            </label>
+            <p class="field-error" data-error-for="consent"></p>
+          </div>
+
+          <button class="button button-primary" type="submit">Отправить</button>
+          <p class="feedback-status" role="status" aria-live="polite" data-feedback-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-title">Стресс под контролем</p>
+        <p class="footer-text">Учебный социальный проект о психологическом здоровье молодёжи.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <ul>
+          <li><a href="#about">О стрессе</a></li>
+          <li><a href="#test">Тест</a></li>
+          <li><a href="#breathing">Дыхание</a></li>
+          <li><a href="#checklist">Чек-лист</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <button class="link-button" type="button" data-dialog-open>Политика конфиденциальности</button>
+        <p class="footer-text">© <span data-current-year>2025</span> Проект «Стресс под контролем»</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="modal-inner">
+      <h2 id="privacy-title">Политика конфиденциальности</h2>
+      <p>Ресурс не использует системы аналитики, рекламные скрипты и сторонние счётчики.</p>
+      <p>Введённые в форму данные обрабатываются только в браузере пользователя и не передаются на сервер. Сообщения не сохраняются.</p>
+      <p>Результаты теста и отметки в чек-листе существуют только до перезагрузки страницы: в постоянное хранилище ничего не записывается.</p>
+      <p>Сайт использует защищённое соединение HTTPS, а содержимое ограничено политикой безопасности контента.</p>
+      <button class="button button-primary" type="button" data-dialog-close>Закрыть</button>
+    </div>
+  </dialog>
+</body>
+</html>

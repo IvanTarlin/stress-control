@@ -1,0 +1,14 @@
+{
+  "name": "Стресс под контролем",
+  "short_name": "Стресс",
+  "icons": [
+    {
+      "src": "images/logo/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0f766e",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
